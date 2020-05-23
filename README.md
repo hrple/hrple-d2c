@@ -1,4 +1,4 @@
-# Hrple - Company
+# Hrple D2C API
 
 **Company** does x y z .
 
