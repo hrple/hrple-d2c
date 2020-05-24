@@ -1,20 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	"hrple/d2c/api/internal/handlers"
 
 	web "github.com/hrple/common/server"
 )
 
 func main() {
-	web.Get("/hello", helloWorldStd)
+	handlers.RegisterCompanyHandler()
+
 	logger := web.GetLogger()
 	if err := web.Start(""); err != nil {
 		logger.Fatalf("Could not listen: %v\n", err)
 	}
-}
-
-func helloWorldStd(w http.ResponseWriter, r *http.Request) {
-	_, _ = fmt.Fprintf(w, "hello %v \n", r.URL)
 }

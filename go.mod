@@ -1,8 +1,6 @@
-module github.com/hrple/hrple-d2c-api
+module hrple/d2c/api
 
-require (
-	github.com/hrple/common v0.0.0
-)
+require github.com/hrple/common v0.0.0
 
 replace github.com/hrple/common => ../common
 
