@@ -1,13 +1,15 @@
 package main
 
 import (
-	"hrple/d2c/api/internal/handlers"
+	"hrple/d2c/api/internal/api/company"
+	"hrple/d2c/api/internal/api/status"
 
 	web "github.com/hrple/common/server"
 )
 
 func main() {
-	handlers.RegisterCompanyHandler()
+	company.RegisterHandler()
+	status.RegisterHandler()
 
 	logger := web.GetLogger()
 	if err := web.Start(""); err != nil {
